@@ -22,7 +22,7 @@ const app = express();
 app.use(express.json());
 app.use(cors({
   origin: (origin, cb) => {
-    const allowed = process.env.CLIENT_URL ? [process.env.CLIENT_URL] : ['http://localhost:5173', 'http://127.0.0.1:5173'];
+    const allowed = process.env.CLIENT_URL ? [process.env.CLIENT_URL] : ['http://localhost:5173', 'http://127.0.0.1:5173','https://whatsapp-clone-dun-nine.vercel.app'];
     if (!origin || allowed.includes(origin)) return cb(null, true);
     return cb(new Error('CORS not allowed'));
   },
